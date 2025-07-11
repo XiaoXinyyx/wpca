@@ -15,9 +15,9 @@ def check_array_with_weights(X, weights, **kwargs):
     kwargs_weights.update(copy=False)
     weights = check_array(weights, **kwargs_weights)
 
-    # Always use force_all_finite=False for X
+    # Always use ensure_all_finite=False for X
     kwargs_X = dict(kwargs)
-    kwargs_X.update(force_all_finite=False)
+    kwargs_X.update(ensure_all_finite=False)
     X = check_array(X, **kwargs_X)
 
     # Make sure shapes match and missing data has weights=0
